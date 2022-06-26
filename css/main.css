@@ -4,7 +4,9 @@
 }
 
 body {
-  font-size: 4rem;
+  font-size: 3rem;
+  color: brown;
+  font-weight: bolder;
   height: 1000px;
   width: 2000px;
 }
