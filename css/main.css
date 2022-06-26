@@ -22,18 +22,29 @@ div.area {
   border: solid black;
 }
 
-div.top {
-  margin-left: 20px;
+div.top,
+div.bottom {
   background-color: white;
-  height: 23px;
+  margin-left: 20px;
   position: -webkit-sticky;
   position: sticky;
-  top: 0;
   z-index: 100;
 }
 
-.top > div,
-.bottom > div {
+div.top {
+  height: 23px;
+  top: 0;
+}
+
+div.bottom {
+  width: 430px;
+  height: 22px;
+  bottom: 0;
+  clear: both;
+}
+
+div.top > div,
+div.bottom > div {
   width: 50px;
   height: 23px;
   font-size: 1rem;
@@ -41,32 +52,7 @@ div.top {
   float: left;
 }
 
-div.bottom {
-  width: 430px;
-  margin-left: 20px;
-  background-color: white;
-  height: 22px;
-  position: -webkit-sticky;
-  position: sticky;
-  bottom: 0;
-  z-index: 100;
-  clear: both;
-}
-
-div.left {
-  padding-top: 20px;
-  padding-bottom: 5px;
-  font-size: 1rem;
-  height: 380px;
-  width: 22px;
-  float: left;
-  background-color: white;
-  position: -webkit-sticky;
-  position: sticky;
-  left: 0px;
-  z-index: 100;
-}
-
+div.left,
 div.right {
   padding-top: 20px;
   padding-bottom: 5px;
@@ -77,36 +63,40 @@ div.right {
   background-color: white;
   position: -webkit-sticky;
   position: sticky;
-  right: 0px;
   z-index: 100;
 }
 
-.left > div,
-.right > div {
+div.left {
+  left: 0px;
+}
+
+div.right {
+  right: 0px;
+}
+
+div.left > div,
+div.right > div {
   height: 50px;
   text-align: center;
 }
 
-.row {
+div.row {
   height: 50px;
   width: 400px;
 }
 
-.row > div {
+div.row > div {
   width: 50px;
   height: 50px;
   float: left;
-  position: relative;
 }
 
-.row:nth-child(odd) > div {
-  background-color: black;
-}
-
-.row:nth-child(even) > div {
+div.row:nth-child(odd) > div:nth-child(odd),
+div.row:nth-child(even) > div:nth-child(even) {
   background-color: white;
 }
 
-.row > div:nth-child(odd) {
-  top: 50px;
+div.row:nth-child(odd) > div:nth-child(even),
+div.row:nth-child(even) > div:nth-child(odd) {
+  background-color: black;
 }/*# sourceMappingURL=main.css.map */

@@ -1,94 +1,102 @@
+$cellSize: 50px;
+
 * {
-    margin: 0;
-    padding: 0;
-  }
-  body {
-    font-size: 4rem;
-    height: 1000px;
-    width: 2000px;
-  }
-  div.board {
-    height: 450px;
-    width: 450px;
-    border: solid black;
-  }
-  div.area {
-    width: 400px;
-    height: 400px;
-    float: left;
-    border: solid black;
-  }
-  div.top {
-    margin-left: 20px;
-    background-color: white;
-    height: 23px;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-  }
-  .top > div,
-  .bottom > div {
-    width: 50px;
-    height: 23px;
-    font-size: 1rem;
-    text-align: center;
-    float: left;
-  }
-  div.bottom {
-    width: 430px;
-    margin-left: 20px;
-    background-color: white;
-    height: 22px;
-    position: sticky; 
-    bottom: 0;
-    z-index: 100;
-    clear: both;
-  }
-  div.left {
-    padding-top: 20px;
-    padding-bottom: 5px;
-    font-size: 1rem;
-    height: 380px;
-    width: 22px;
-    float: left;
-    background-color: white;
-    position: sticky;
-    left: 0px;
-    z-index: 100;
-  }
-  div.right {
-    padding-top: 20px;
-    padding-bottom: 5px;
-    font-size: 1rem;
-    height: 380px;
-    width: 22px;
-    float: left;
-    background-color: white;
-    position: sticky;
-    right: 0px;
-    z-index: 100;
-  }
-  .left > div,
-  .right > div {
-    height: 50px;
-    text-align: center;
-  }
-  .row {
-    height: 50px;
-    width: 400px;
-  }
-  .row > div {
-    width: 50px;
-    height: 50px;
-    float: left;
-    position: relative;
-  }
-  .row:nth-child(odd) > div {
-    background-color: black;
-  }
-  .row:nth-child(even) > div {
-    background-color: white;
-  }
-  .row > div:nth-child(odd) {
-    top: 50px;
-  }
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 4rem;
+  height: 1000px;
+  width: 2000px;
+}
+
+div.board {
+  height: $cellSize * 9;
+  width: $cellSize * 9;
+  border: solid black;
+}
+
+div.area {
+  width: $cellSize * 8;
+  height: $cellSize * 8;
+  float: left;
+  border: solid black;
+}
+
+div.top,
+div.bottom {
+  background-color: white;
+  margin-left: 20px;
+  position: sticky;
+  z-index: 100;
+}
+
+div.top {
+  height: 23px;
+  top: 0;
+}
+
+div.bottom {
+  width: 430px;
+  height: 22px;
+  bottom: 0;
+  clear: both;
+}
+
+div.top > div,
+div.bottom > div {
+  width: 50px;
+  height: 23px;
+  font-size: 1rem;
+  text-align: center;
+  float: left;
+}
+
+div.left,
+div.right {
+  padding-top: 20px;
+  padding-bottom: 5px;
+  font-size: 1rem;
+  height: 380px;
+  width: 22px;
+  float: left;
+  background-color: white;
+  position: sticky;
+  z-index: 100;
+}
+
+div.left {
+  left: 0px;
+}
+
+div.right {
+  right: 0px;
+}
+
+div.left > div,
+div.right > div {
+  height: 50px;
+  text-align: center;
+}
+
+div.row {
+  height: $cellSize;
+  width: $cellSize * 8;
+}
+
+div.row > div {
+  width: $cellSize;
+  height: $cellSize;
+  float: left;
+}
+
+div.row:nth-child(odd) > div:nth-child(odd),
+div.row:nth-child(even) > div:nth-child(even) {
+  background-color: white;
+}
+
+div.row:nth-child(odd) > div:nth-child(even),
+div.row:nth-child(even) > div:nth-child(odd) {
+  background-color: black;
+}
