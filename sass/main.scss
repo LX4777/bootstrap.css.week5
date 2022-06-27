@@ -16,24 +16,24 @@ $figures: (
   "rook": "rook.svg",
 );
 
-@function getFigureUrl($figure, $color) {
+@function get-figure-url($figure, $color) {
   @return url("/svg/" + $color + "-" + $figure);
 }
 
-@mixin figureStyle {
+@mixin figure-style {
   background-size: cover;
-  height: 50px; 
+  height: 50px;
   width: 50px;
 }
 
 @each $name, $svg in $figures {
   .w-#{$name} {
-    background: getFigureUrl($svg, $white);
-    @include figureStyle;
+    background: get-figure-url($svg, $white);
+    @include figure-style;
   }
   .b-#{$name} {
-    background: getFigureUrl($svg, $black);
-    @include figureStyle;
+    background: get-figure-url($svg, $black);
+    @include figure-style;
     transform: rotate(180deg);
   }
 }
@@ -52,55 +52,54 @@ body {
   width: 2000px;
 }
 
-div.board {
+.board {
   height: $cellSize * 9;
   width: $cellSize * 9;
   border: solid black;
   background-image: $darkTexture;
 }
 
-div.area {
+.area {
   width: $cellSize * 8;
   height: $cellSize * 8;
   float: left;
   border: solid black;
 }
 
-div.top,
-div.bottom {
+.top,
+.bottom {
   margin-left: 20px;
   position: sticky;
   z-index: 100;
+
+  & > div {
+    width: 50px;
+    height: 23px;
+    font-size: 1rem;
+    text-align: center;
+    float: left;
+  }
 }
 
-div.top {
+.top {
   height: 23px;
   top: 0;
 }
 
-div.bottom {
+.bottom {
   width: 430px;
   height: 22px;
   bottom: 0;
   clear: both;
 }
 
-div.top > div,
-div.bottom > div {
-  width: 50px;
-  height: 23px;
-  font-size: 1rem;
-  text-align: center;
-  float: left;
-}
-
-div.top > div,
-div.right > div {
+.top > div,
+.right > div {
   transform: rotate(180deg);
 }
 
-div.left,
-div.right {
+.left,
+.right {
   padding-bottom: 5px;
   font-size: 1rem;
   height: 380px;
@@ -108,41 +107,40 @@ div.right {
   float: left;
   position: sticky;
   z-index: 100;
+
+  & > div {
+    height: 50px;
+    text-align: center;
+  }
 }
 
-div.left {
+.left {
   left: 0px;
   padding-top: 20px;
 }
 
-div.right {
+.right {
   right: 0px;
   margin-top: -13px;
 }
 
-div.left > div,
-div.right > div {
-  height: 50px;
-  text-align: center;
-}
-
-div.row {
+.row {
   height: $cellSize;
   width: $cellSize * 8;
+
+  & > div {
+    width: $cellSize;
+    height: $cellSize;
+    float: left;
+  }
 }
 
-div.row > div {
-  width: $cellSize;
-  height: $cellSize;
-  float: left;
-}
-
-div.row:nth-child(odd) > div:nth-child(odd),
-div.row:nth-child(even) > div:nth-child(even) {
+.row:nth-child(odd) > div:nth-child(odd),
+.row:nth-child(even) > div:nth-child(even) {
   background-image: $lightWood;
 }
 
-div.row:nth-child(odd) > div:nth-child(even),
-div.row:nth-child(even) > div:nth-child(odd) {
- background-image: $darkWood;
+.row:nth-child(odd) > div:nth-child(even),
+.row:nth-child(even) > div:nth-child(odd) {
+  background-image: $darkWood;
 }
