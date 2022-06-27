@@ -1,3 +1,53 @@
+.w-bishop {
+  background: url("/svg/w-bishop.svg");
+  background-size: cover;
+}
+
+.b-bishop {
+  background: url("/svg/b-bishop.svg");
+  background-size: cover;
+}
+
+.w-king {
+  background: url("/svg/w-king.svg");
+  background-size: cover;
+}
+
+.b-king {
+  background: url("/svg/b-king.svg");
+  background-size: cover;
+}
+
+.w-knight {
+  background: url("/svg/w-knight.svg");
+  background-size: cover;
+}
+
+.b-knight {
+  background: url("/svg/b-knight.svg");
+  background-size: cover;
+}
+
+.w-pawn {
+  background: url("/svg/w-pawn.svg");
+  background-size: cover;
+}
+
+.b-pawn {
+  background: url("/svg/b-pawn.svg");
+  background-size: cover;
+}
+
+.w-rook {
+  background: url("/svg/w-rook.svg");
+  background-size: cover;
+}
+
+.b-rook {
+  background: url("/svg/b-rook.svg");
+  background-size: cover;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -109,71 +159,4 @@ div.row:nth-child(odd) > div:nth-child(even),
 div.row:nth-child(even) > div:nth-child(odd) {
   background-color: black;
   opacity: 0.7;
-}
-
-.w-king {
-  background: url("/svg/w-king.svg");
-  background-size: cover;
-}
-
-.w-queen {
-  background: url("/svg/w-queen.svg");
-  background-size: cover;
-}
-
-.w-bishop {
-  background: url("/svg/w-bishop.svg");
-  background-size: cover;
-}
-
-.w-knight {
-  background: url("/svg/w-knight.svg");
-  background-size: cover;
-}
-
-.w-rook {
-  background: url("/svg/w-rook.svg");
-  background-size: cover;
-}
-
-.w-pawn {
-  background: url("/svg/w-pawn.svg");
-  background-size: cover;
-}
-
-.b-king {
-  background: url("/svg/b-king.svg");
-  background-size: cover;
-}
-
-.b-queen {
-  background: url("/svg/b-queen.svg");
-  background-size: cover;
-}
-
-.b-bishop {
-  background: url("/svg/b-bishop.svg");
-  background-size: cover;
-}
-
-.b-knight {
-  background: url("/svg/b-knight.svg");
-  background-size: cover;
-}
-
-.b-rook {
-  background: url("/svg/b-rook.svg");
-  background-size: cover;
-}
-
-.b-pawn {
-  background: url("/svg/b-pawn.svg");
-  background-size: cover;
-}
-
-.figure {
-  opacity: 0;
-  z-index: 101;
-  height: 50px;
-  width: 50px;
 }/*# sourceMappingURL=main.css.map */

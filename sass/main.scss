@@ -12,12 +12,31 @@ $pawn: "pawn.svg";
 $queen: "queen.svg";
 $rook: "rook.svg";
 
-@function getFigureUrl($figure, $color){
-  @return url("/svg/"+$color+'-'+$figure);
+$figures: (
+  "bishop": "bishop.svg",
+  "king": "king.svg",
+  "knight": "knight.svg",
+  "pawn": "pawn.svg",
+  "rook": "rook.svg",
+);
+
+@function getFigureUrl($figure, $color) {
+  @return url("/svg/" + $color + "-" + $figure);
 }
 
 @mixin figureStyle {
   background-size: cover;
+}
+
+@each $name, $svg in $figures {
+  .w-#{$name} {
+    background: getFigureUrl($svg, $white);
+    @include figureStyle;
+  }
+  .b-#{$name} {
+    background: getFigureUrl($svg, $black);
+    @include figureStyle;
+  }
 }
 
 * {
@@ -78,7 +97,7 @@ div.bottom > div {
 
 div.top > div,
 div.right > div {
-    transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 
 div.left,
@@ -129,71 +148,4 @@ div.row:nth-child(odd) > div:nth-child(even),
 div.row:nth-child(even) > div:nth-child(odd) {
   background-color: black;
   opacity: 0.7;
-}
-
-.w-king {
-  background: getFigureUrl($king, $white);
-  @include figureStyle;
-}
-
-.w-queen {
-  background: getFigureUrl($queen, $white);
-  @include figureStyle;
-}
-
-.w-bishop {
-  background: getFigureUrl($bishop, $white);
-  @include figureStyle;
-}
-
-.w-knight {
-  background: getFigureUrl($knight, $white);
-  @include figureStyle;
-}
-
-.w-rook {
-  background: getFigureUrl($rook, $white);
-  @include figureStyle;
-}
-
-.w-pawn {
-  background: getFigureUrl($pawn, $white);
-  @include figureStyle;
-}
-
-.b-king {
-  background: getFigureUrl($king, $black);
-  @include figureStyle;
-}
-
-.b-queen {
-  background: getFigureUrl($queen, $black);
-  @include figureStyle;
-}
-
-.b-bishop {
-  background: getFigureUrl($bishop, $black);
-  @include figureStyle;
-}
-
-.b-knight {
-  background: getFigureUrl($knight, $black);
-  @include figureStyle;
-}
-
-.b-rook {
-  background: getFigureUrl($rook, $black);
-  @include figureStyle;
-}
-
-.b-pawn {
-  background: getFigureUrl($pawn, $black);
-  @include figureStyle;
-}
-
-.figure {
-  opacity: 0;
-  z-index: 101;
-  height: $cellSize;
-  width: $cellSize;
 }
