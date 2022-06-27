@@ -1,5 +1,6 @@
 $cellSize: 50px;
 $lightTexture: url("/images/light-tree-texture.jpg");
+$darkTexture: url("/images/dark-tree-texture.jpeg");
 
 * {
   margin: 0;
@@ -8,7 +9,7 @@ $lightTexture: url("/images/light-tree-texture.jpg");
 
 body {
   font-size: 3rem;
-  color: brown;
+  color: white;
   font-weight: bolder;
   height: 1000px;
   width: 2000px;
@@ -18,7 +19,7 @@ div.board {
   height: $cellSize * 9;
   width: $cellSize * 9;
   border: solid black;
-  background-image: $lightTexture;
+  background-image: $darkTexture;
 }
 
 div.area {
@@ -99,14 +100,21 @@ div.row > div {
   float: left;
 }
 
-/*div.row:nth-child(odd) > div:nth-child(odd),
+div.row:nth-child(odd) > div:nth-child(odd),
 div.row:nth-child(even) > div:nth-child(even) {
   background-color: white;
-}*/
+  opacity: 0.3;
+}
 
 div.row:nth-child(odd) > div:nth-child(even),
 div.row:nth-child(even) > div:nth-child(odd) {
   background-color: black;
   opacity: 0.7;
 
+}
+
+.king {
+  background: url("/svg/king.svg");
+  background-size: cover;
+  color: white;
 }
