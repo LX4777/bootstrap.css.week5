@@ -1,61 +1,91 @@
 .w-bishop {
   background: url("/svg/w-bishop.svg");
   background-size: cover;
+  height: 50px;
+  width: 50px;
 }
 
 .b-bishop {
   background: url("/svg/b-bishop.svg");
   background-size: cover;
+  height: 50px;
+  width: 50px;
+  transform: rotate(180deg);
 }
 
 .w-king {
   background: url("/svg/w-king.svg");
   background-size: cover;
+  height: 50px;
+  width: 50px;
 }
 
 .b-king {
   background: url("/svg/b-king.svg");
   background-size: cover;
+  height: 50px;
+  width: 50px;
+  transform: rotate(180deg);
 }
 
 .w-queen {
   background: url("/svg/w-queen.svg");
   background-size: cover;
+  height: 50px;
+  width: 50px;
 }
 
 .b-queen {
   background: url("/svg/b-queen.svg");
   background-size: cover;
+  height: 50px;
+  width: 50px;
+  transform: rotate(180deg);
 }
 
 .w-knight {
   background: url("/svg/w-knight.svg");
   background-size: cover;
+  height: 50px;
+  width: 50px;
 }
 
 .b-knight {
   background: url("/svg/b-knight.svg");
   background-size: cover;
+  height: 50px;
+  width: 50px;
+  transform: rotate(180deg);
 }
 
 .w-pawn {
   background: url("/svg/w-pawn.svg");
   background-size: cover;
+  height: 50px;
+  width: 50px;
 }
 
 .b-pawn {
   background: url("/svg/b-pawn.svg");
   background-size: cover;
+  height: 50px;
+  width: 50px;
+  transform: rotate(180deg);
 }
 
 .w-rook {
   background: url("/svg/w-rook.svg");
   background-size: cover;
+  height: 50px;
+  width: 50px;
 }
 
 .b-rook {
   background: url("/svg/b-rook.svg");
   background-size: cover;
+  height: 50px;
+  width: 50px;
+  transform: rotate(180deg);
 }
 
 * {
@@ -64,9 +94,9 @@
 }
 
 body {
-  font-size: 3rem;
   color: white;
-  font-weight: bolder;
+  -webkit-text-stroke: 0.2px black;
+  font-weight: bold;
   text-transform: uppercase;
   height: 1000px;
   width: 2000px;
@@ -76,7 +106,7 @@ div.board {
   height: 450px;
   width: 450px;
   border: solid black;
-  background-image: url("/images/dark-tree-texture.jpeg");
+  background-image: url("/images/dark-texture.jpg");
 }
 
 div.area {
@@ -161,12 +191,10 @@ div.row > div {
 
 div.row:nth-child(odd) > div:nth-child(odd),
 div.row:nth-child(even) > div:nth-child(even) {
-  background-color: white;
-  opacity: 0.3;
+  background-image: url("/images/light-wood.jpg");
 }
 
 div.row:nth-child(odd) > div:nth-child(even),
 div.row:nth-child(even) > div:nth-child(odd) {
-  background-color: black;
-  opacity: 0.7;
+  background-image: url("/images/dark-wood.jpeg");
 }/*# sourceMappingURL=main.css.map */
