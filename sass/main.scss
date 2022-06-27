@@ -1,5 +1,5 @@
 $cellSize: 50px;
-$lighttexture: url("/images/light-tree-texture.jpg");
+$lightTexture: url("/images/light-tree-texture.jpg");
 
 * {
   margin: 0;
@@ -18,7 +18,7 @@ div.board {
   height: $cellSize * 9;
   width: $cellSize * 9;
   border: solid black;
-  background-image: $lighttexture;
+  background-image: $lightTexture;
 }
 
 div.area {
@@ -79,7 +79,7 @@ div.left {
 
 div.right {
   right: 0px;
-  margin-top: -15px;
+  margin-top: -13px;
 }
 
 div.left > div,
