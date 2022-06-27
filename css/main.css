@@ -18,6 +18,16 @@
   background-size: cover;
 }
 
+.w-queen {
+  background: url("/svg/w-queen.svg");
+  background-size: cover;
+}
+
+.b-queen {
+  background: url("/svg/b-queen.svg");
+  background-size: cover;
+}
+
 .w-knight {
   background: url("/svg/w-knight.svg");
   background-size: cover;
