@@ -26,13 +26,13 @@ $figures: (
   width: 50px;
 }
 
-@each $name, $svg in $figures {
-  .w-#{$name} {
-    background: get-figure-url($svg, $white);
+@each $figure, $picture in $figures {
+  .w-#{$figure} {
+    background: get-figure-url($picture, $white);
     @include figure-style;
   }
-  .b-#{$name} {
-    background: get-figure-url($svg, $black);
+  .b-#{$figure} {
+    background: get-figure-url($picture, $black);
     @include figure-style;
     transform: rotate(180deg);
   }
