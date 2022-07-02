@@ -116,6 +116,18 @@ body {
   border: solid black;
 }
 
+.top {
+  height: 23px;
+  top: 0;
+}
+
+.bottom {
+  width: 430px;
+  height: 22px;
+  bottom: 0;
+  clear: both;
+}
+
 .top,
 .bottom {
   margin-left: 20px;
@@ -132,21 +144,19 @@ body {
   float: left;
 }
 
-.top {
-  height: 23px;
-  top: 0;
-}
-
-.bottom {
-  width: 430px;
-  height: 22px;
-  bottom: 0;
-  clear: both;
-}
-
 .top > div,
 .right > div {
   transform: rotate(180deg);
+}
+
+.left {
+  left: 0px;
+  padding-top: 20px;
+}
+
+.right {
+  right: 0px;
+  margin-top: -13px;
 }
 
 .left,
@@ -164,16 +174,6 @@ body {
 .right > div {
   height: 50px;
   text-align: center;
-}
-
-.left {
-  left: 0px;
-  padding-top: 20px;
-}
-
-.right {
-  right: 0px;
-  margin-top: -13px;
 }
 
 .row {
